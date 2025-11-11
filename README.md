@@ -68,7 +68,7 @@ Copy code
 git clone https://github.com/SOHAN562001/stock_price_notifier.git
 cd stock_price_notifier
 2. Install Dependencies
-bash
+
 Copy code
 pip install selenium webdriver-manager beautifulsoup4 lxml requests win10toast apscheduler
 3. Run the Script
@@ -84,7 +84,7 @@ Stock Price Notifier started...
 [debug] found price text: ₹1,485.00
 [notify] RELIANCE reached ₹1485.00 (>= 1482.0)
 A desktop notification will appear instantly once your threshold is met.
-
+```
 Proof of Work
 Terminal Output
 This screenshot shows the live price fetch and threshold detection process.
