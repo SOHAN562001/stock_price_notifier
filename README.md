@@ -1,38 +1,37 @@
-Stock Price Notifier — Real-Time Automated Stock Alert System
+# Stock Price Notifier — Real-Time Automated Stock Alert System
 
-Stock Price Notifier is a Python-based automation tool that tracks live stock prices and instantly alerts you when they cross your defined threshold.
-It showcases how to use Selenium, BeautifulSoup, and Win10Toast together to fetch live market data, monitor thresholds, and trigger desktop notifications — all in real time.
+**Stock Price Notifier** is a Python-based automation tool that tracks live stock prices and alerts you when they cross your defined threshold.  
+It demonstrates how to use **Selenium**, **BeautifulSoup**, and **Win10Toast** together to fetch data, monitor thresholds, and trigger desktop notifications — all in real time.
 
-Overview
+---
 
-This project continuously monitors selected stocks (for example: Reliance, TCS, Infosys) using data scraped from Google Finance.
-Whenever a stock’s price reaches or exceeds your target, the system triggers a Windows desktop notification so you never miss your ideal buy or sell point.
+## Overview
 
-It demonstrates key concepts such as:
+This project continuously monitors selected stocks (for example: Reliance, TCS, Infosys) using data scraped from **Google Finance**.  
+Whenever a stock’s price reaches or exceeds your target, the system triggers a **Windows desktop notification**, so you never miss your ideal buy/sell point.
 
-Real-time data scraping
+You’ll learn concepts like:
+- Real-time web scraping  
+- Background automation and scheduling  
+- Modular Python architecture  
+- System-level notification handling  
 
-Background scheduling and monitoring
+---
 
-Event-driven notifications
+## Key Features
 
-Modular Python automation design
+- **Real-Time Price Monitoring:** Live price tracking with Selenium  
+- **Customizable Watchlist:** Set multiple stocks and thresholds  
+- **Instant Alerts:** Windows desktop notifications via Win10Toast  
+- **Modular Codebase:** Separate modules for fetching, notifying, and main control  
+- **Lightweight:** No APIs or dashboards required  
+- **Extensible:** Can easily integrate with Telegram or Email  
 
-Key Features
+---
 
-Real-time price monitoring via Selenium
+## Project Structure
 
-Configurable watchlist and thresholds for multiple stocks
-
-Instant Windows desktop alerts using Win10Toast
-
-Modular structure with independent scripts for fetching, notifications, and control
-
-Extensible architecture — can be expanded to support Telegram or email alerts
-
-Lightweight and dependency-minimal, avoiding complex APIs or dashboards
-
-Project Structure
+```bash
 stock_price_notifier/
 │
 ├── assets/
@@ -44,8 +43,9 @@ stock_price_notifier/
 ├── notifiers.py     # Notification functions
 ├── watch.py         # Main runner script
 └── __pycache__/     # Auto-generated cache
-
 Configuration Example (config.py)
+python
+Copy code
 WATCHLIST = [
     {
         "name": "RELIANCE",
@@ -58,66 +58,63 @@ WATCHLIST = [
 
 NOTIFY = {
     "toast": True,       # Enable Windows notifications
-    "email": False,      # Optional - enable later if needed
+    "email": False,      # Optional - enable later
     "telegram": False    # Optional - for mobile alerts
 }
-
-Installation and Setup
-<details> <summary><b>Step-by-Step Setup</b></summary>
+Installation & Setup
 1. Clone the Repository
+bash
+Copy code
 git clone https://github.com/SOHAN562001/stock_price_notifier.git
 cd stock_price_notifier
-
 2. Install Dependencies
+bash
+Copy code
 pip install selenium webdriver-manager beautifulsoup4 lxml requests win10toast apscheduler
-
 3. Run the Script
+bash
+Copy code
 python watch.py
-
-
 Example Output:
 
+csharp
+Copy code
 Stock Price Notifier started...
 [checking] RELIANCE
 [debug] found price text: ₹1,485.00
 [notify] RELIANCE reached ₹1485.00 (>= 1482.0)
+A desktop notification will appear instantly once your threshold is met.
 
-
-A Windows desktop notification will appear immediately once the price crosses your set limit.
-
-</details>
 Proof of Work
-1. Terminal Output
+Terminal Output
+This screenshot shows the live price fetch and threshold detection process.
 
-This screenshot demonstrates the live stock price fetching and threshold detection process.
 
-2. Desktop Notification
+Desktop Notification
+This screenshot confirms the real-time alert triggered by the notifier.
 
-This screenshot confirms the instant Windows desktop alert once a price target is met.
 
 Learning Outcomes
+You will learn to:
 
-By completing this project, you will learn to:
+Automate data extraction using Selenium WebDriver
 
-Automate live data extraction using Selenium WebDriver
+Parse live HTML using BeautifulSoup
 
-Utilize CSS selectors for dynamic data parsing
+Send real-time Windows notifications
 
-Send system notifications using Win10Toast
+Build modular Python automation systems
 
-Build modular and maintainable Python scripts
-
-Apply real-world automation workflows to financial data
+Apply event-driven logic for monitoring tasks
 
 Future Enhancements
+Add Telegram and Email alert integrations
 
-Integrate Telegram and Email alerts
+Save alerts in CSV/SQLite for history tracking
 
-Log triggered alerts in CSV or SQLite
+Build a Streamlit dashboard for visualization
 
-Add a Streamlit dashboard for price visualization
-
-Extend support for official APIs (e.g., Yahoo Finance, NSE API)
+Use official APIs (e.g., Yahoo Finance, NSE API) for better stability
 
 Tech Stack
 Category	Tools / Libraries
@@ -126,12 +123,11 @@ Web Automation	Selenium, WebDriver Manager
 Scraping	BeautifulSoup, lxml
 Notifications	Win10Toast, Telegram Bot API
 OS	Windows 10 / 11
-Author
 
+Author
 Sohan Ghosh
 M.Sc. in Data Science & Artificial Intelligence
 Ramakrishna Mission Residential College (University of Calcutta)
 
-LinkedIn: linkedin.com/in/sohanghosh562001
 
 GitHub: github.com/SOHAN562001
